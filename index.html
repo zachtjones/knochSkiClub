@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Knights and Days of Adventure</title>
+        <!-- add the keywords in google or related search engines by using meta -->
+        <meta name="description" content="KDA- Knoch Ski Club Website">	<meta name="google-site-verification" content="qPUQQVqywp3UmKEnPfxtL35YQscQuTNkWJgBByx2M9Q" />
+        <meta name="keywords" content="kda, KDA, Knoch Ski Club, Knights and Days of Adventure">
+    </head>
+    <body text="#448844" bgcolor="#dedeeff">
+    <center>
+        <basefont size=4>
+
+            <h1>Welcome to the <u>KDA</u> website!</h1>
+            <hr size=5 width=80% align=center>
+            <p>
+            <font size=5>
+            Home | <a href="about.html">About</a> | <a href="signup.html">Sign up sheet</a> | <a href="calendar.html">Calendar</a> | <a href="faq.html">FAQ's</a> | <a href="contact.html">Contact us</a> | <a href="fyi.html">FYI</a>
+            </font>
+            <hr>
+            <table>
+                <col width=50>
+                <col width=500>
+                <col width=50>
+                <tr><td><button onclick="prevImg()">&lt;--</button></td>
+                    <td> <img alt="main image" id="mainImage" src=images\skier1.jpg width=600></td>
+                    <td><button onclick="nextImg()">--&gt;</button></td>
+                </tr></table>
+            <p id="textForImage"></p>
+            <br clear=all></center>
+            <a href="tripcosts.html">Calculate trip costs for the 2015-2016 ski season</a>
+            <p><a href="trips.html">More information on this year's trips</a></p>
+            <center> <p><big>Have a great 2015-2016 ski season!</big></p> </center>
+            <p><b>KDA, (<i>Knights and Days of Adventure</i>)</b>, was originally started as Knoch Ski Club in 1987 by a student, Scott Gumpto. 
+                Through the years, it has grown and diversified to include other adventurous activities such as rafting, camping, caving, and rock climbing.
+                In 2004 KDA was adopted as an outreach ministry of Jefferson Center Presbyterian Church. In 2010, KDA became its own non-profit organization with the same goals.
+            </p>
+            <p>Membership is open to anyone grades 7-12 that lives in the South Butler County School district.</p>
+            <center>
+                <blockquote><i>Parents are always welcome and encouraged to participate in KDA activities.</i></blockquote>
+            </center>
+            <p>Over the years, many people (bus drivers, group sales representatives, parents, and other skiers/boarders) have complimented KDA members for being polite, courteous, responsible, and respectful.
+                KDA members have accepted the challenge to have fun <b>without</b> the use of drugs, including alcohol, or tobacco, and treat other people as children of God. </p>
+            <p>
+            <hr size=3 width=90% align=center>
+            <h2>The Goals of KDA</h2>
+            <big>To Enjoy Life.</big><br><p>
+            <blockquote>
+                <i>I have come that you may have life - life in all its fullness. (Jesus)<br>John 10:10</i><p>
+            </blockquote>
+            <big>To recognize the beauty of creation, especially our own health and to enjoy life to its fullness without the impairment of alcohol, drugs, or tobacco.</big><br><p>
+            <blockquote>
+                <i>Surely you know that you are God's temple and that God's spirit lives in you! So, if anyone destroys God's temple, God will destroy him. 
+                    For God's temple is Hold and you yourselves are his temple.<br>1 Corinthians 3:16</i>
+            </blockquote>
+            <big>To hear the Truth of the Bible.</big><br><p>
+            <blockquote>
+                <i>All scripture is inspired by God and is useful for teaching the truth, rebuking error, correcting faults, and giving instruction for right living.<br>2 Timothy 3:16</i>
+            </blockquote>
+            <hr>
+            <center><a href="homemobile.html">Go to mobile site</a></center>
+            <script>
+                var x = 1;
+                function nextImg() {
+
+                    if (x === 1) {
+                        document.getElementById("mainImage").src = "http://www.kda4snow.org/images/skier2.jpg";
+                        document.getElementById("mainImage").width = 600;
+                        x = 2;
+                    } else if (x === 2) {
+                        document.getElementById("mainImage").src = "http://www.kda4snow.org/images/skier3.jpg";
+                        document.getElementById("mainImage").width = 600;
+                        x = 3;
+                    } else {
+                        document.getElementById("mainImage").src = "http://www.kda4snow.org/images/skier1.jpg";
+                        document.getElementById("mainImage").width = 600;
+                        x = 1;
+                    }
+                    document.getElementById("textForImage").innerHTML = "Image  " + x + " of 3";
+                }
+                function prevImg() {
+                    if (x === 1) {
+                        document.getElementById("mainImage").src = "http://www.kda4snow.org/images/skier3.jpg";
+                        document.getElementById("mainImage").width = 600;
+                        x = 3;
+                    } else if (x === 2) {
+                        document.getElementById("mainImage").src = "http://www.kda4snow.org/images/skier1.jpg";
+                        document.getElementById("mainImage").width = 600;
+                        x = 1;
+                    } else {
+                        document.getElementById("mainImage").src = "http://www.kda4snow.org/images/skier2.jpg";
+                        document.getElementById("mainImage").width = 600;
+                        x = 2;
+                    }
+                    document.getElementById("textForImage").innerHTML = "Image  " + x + " of 3";
+                }
+
+            </script>
+    </body>
+</html>

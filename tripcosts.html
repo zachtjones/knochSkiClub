@@ -1,0 +1,174 @@
+<!DOCTYPE html public>
+<html lang="en-US">
+<head>
+<title>KDA Trip costs</title>
+</head>
+<body>
+<center>
+<basefont size=4>
+<body text=#448844 bgcolor=#dedeeff onload="load()">
+<h1>KDA-Trip cost calculator</h1>
+<hr width=80%>
+<p><font size=5><a href="index.html">Back to home</a></font><p>
+<hr width=90%>
+</center>
+<p>Check the boxes of the items that you plan to use.<br>
+No data is collected based on this, it is only for your reference and to help plan the trips you wish to take.</p>
+<table border=2 cellpadding=8 cellspacing=10>
+<tr><td>Trip Location & Date</td><td>Money due date</td><td>Lift & Bus cost</td><td>Ski rental cost</td><td>Board rental cost</td><td>Helmet rental cost</td></tr>
+<tr><td>Seven Springs <br>Dec. 23<sup>rd</sup></td>
+<td>Monday, Dec. 14<sup>th</sup></td>
+<td>$40.00<input type="checkbox" id="SSLB" onclick="calculateCost()"></td>
+<td>$16.00<input type="checkbox" id="SSSR" onclick="calculateCost()"></td>
+<td>$20.00<input type="checkbox" id="SSBR" onclick="calculateCost()"></td>
+<td>$10.00<input type="checkbox" id="SSHR" onclick="calculateCost()"></td></tr>
+
+<tr><td>Hidden Valley<br>Jan. 8<sup>th</sup></td>
+<td>Tuesday, Dec. 22<sup>nd</sup></td>
+<td>$37.00<input type="checkbox" id="HVLB" onclick="calculateCost()"></td>
+<td>$15.00<input type="checkbox" id="HVSR" onclick="calculateCost()"></td>
+<td>$18.00<input type="checkbox" id="HVBR" onclick="calculateCost()"></td>
+<td>$9.00<input type="checkbox" id="HVHR" onclick="calculateCost()"></td></tr>
+
+<tr><td>Holiday Valley<br>Jan. 18<sup>th</sup></td>
+<td>Wednesday, Jan. 6<sup>th</sup></td>
+<td>$59.00<input type="checkbox" id="HOVLB" onclick="calculateCost()"></td>
+<td>$10.00<input type="checkbox" id="HOVSR" onclick="calculateCost()"></td>
+<td>$10.00<input type="checkbox" id="HOVBR" onclick="calculateCost()"></td>
+<td>$6.00<input type="checkbox" id="HOVHR" onclick="calculateCost()"></td></tr>
+
+<tr><td>Seven Springs<br>Jan. 29<sup>th</sup></td>
+<td>Wednesday, Jan. 20<sup>th</sup></td>
+<td>$45.00<input type="checkbox" id="SS2LB" onclick="calculateCost()"></td>
+<td>$21.00<input type="checkbox" id="SS2SR" onclick="calculateCost()"></td>
+<td>$25.00<input type="checkbox" id="SS2BR" onclick="calculateCost()"></td>
+<td>$10.00<input type="checkbox" id="SS2HR" onclick="calculateCost()"></td></tr>
+
+<tr><td>Smuggler's Notch, Vermont<br>Friday Feb. 12<sup>th</sup> to Monday Feb. 15<sup>th</sup></td>
+<td>Deposit: $100 due December 16<sup>th</sup>. The first 54 get to go.</td>
+<td>$360.00 total<input type="checkbox" id="SN" onclick="calculateCost()"></td>
+<td>Not known</td>
+<td>Not known</td>
+<td>Not known</td></tr>
+
+<tr><td>Seven Springs<br>Feb. 26<sup>th</sup></td>
+<td>Wednesday, Feb. 17<sup>th</sup></td>
+<td>$45.00<input type="checkbox" id="SS3LB" onclick="calculateCost()"></td>
+<td>$21.00<input type="checkbox" id="SS3SR" onclick="calculateCost()"></td>
+<td>$25.00<input type="checkbox" id="SS3BR" onclick="calculateCost()"></td>
+<td>$10.00<input type="checkbox" id="SS3HR" onclick="calculateCost()"></td></tr>
+
+<tr><td>Holiday Valley<br>Mar. 11<sup>th</sup></td>
+<td>Wednesday, Mar. 2<sup>nd</sup></td>
+<td>$59.00<input type="checkbox" id="HOV2LB" onclick="calculateCost()"></td>
+<td>$10.00<input type="checkbox" id="HOV2SR" onclick="calculateCost()"></td>
+<td>$10.00<input type="checkbox" id="HOV2BR" onclick="calculateCost()"></td>
+<td>$6.00<input type="checkbox" id="HOV2HR" onclick="calculateCost()"></td></tr>
+
+<tr><td>Paint Ball<br>Saturday May 14<sup>th</sup></td>
+<td>April 15<sup>th</sup></td>
+<td>$45.00<input type="checkbox" id="PB" onclick="calculateCost()"></td>
+<td colspan=3>All equipment needed is provided (a paintball gun, 500 paintballs, unlimited CO<sub><small>2</small></sub>), but you may purchase additional paintballs with cash.<br>You may bring your own gun as well.</td>
+
+</table>
+<p id="costLabel">
+<script>
+var cost=0.0;
+function calculateCost() {
+cost=0.0;
+<!--Seven Springs-->
+if (document.getElementById("SSLB").checked == true) {
+cost+=40;
+}
+if (document.getElementById("SSSR").checked == true) {
+cost+=16;
+}
+if (document.getElementById("SSBR").checked == true) {
+cost+=20;
+}
+if (document.getElementById("SSHR").checked == true) {
+cost+=10;
+}
+<!--Hidden Valley-->
+if (document.getElementById("HVLB").checked == true) {
+cost+=37;
+}
+if (document.getElementById("HVSR").checked == true) {
+cost+=15;
+}
+if (document.getElementById("HVBR").checked == true) {
+cost+=18;
+}
+if (document.getElementById("HVHR").checked == true) {
+cost+=9;
+}
+<!--Holiday Valley-->
+if (document.getElementById("HOVLB").checked == true) {
+cost+=59;
+}
+if (document.getElementById("HOVSR").checked == true) {
+cost+=10;
+}
+if (document.getElementById("HOVBR").checked == true) {
+cost+=10;
+}
+if (document.getElementById("HOVHR").checked == true) {
+cost+=6;
+}
+<!--Seven Springs 2nd-->
+if (document.getElementById("SS2LB").checked == true) {
+cost+=45;
+}
+if (document.getElementById("SS2SR").checked == true) {
+cost+=21;
+}
+if (document.getElementById("SS2BR").checked == true) {
+cost+=25;
+}
+if (document.getElementById("SS2HR").checked == true) {
+cost+=10;
+}
+<!--Smuggler's notch-->
+if (document.getElementById("SN").checked == true) {
+cost+=360;
+}
+<!--Seven Springs 3rd-->
+if (document.getElementById("SS3LB").checked == true) {
+cost+=45;
+}
+if (document.getElementById("SS3SR").checked == true) {
+cost+=21;
+}
+if (document.getElementById("SS3BR").checked == true) {
+cost+=25;
+}
+if (document.getElementById("SS3HR").checked == true) {
+cost+=10;
+}
+<!--Holiday Valley 2nd-->
+if (document.getElementById("HOV2LB").checked == true) {
+cost+=59;
+}
+if (document.getElementById("HOV2SR").checked == true) {
+cost+=10;
+}
+if (document.getElementById("HOV2BR").checked == true) {
+cost+=10;
+}
+if (document.getElementById("HOV2HR").checked == true) {
+cost+=6;
+}
+<!--Paintball-->
+if (document.getElementById("PB").checked == true) {
+cost+=45;
+}
+
+document.getElementById("costLabel").innerHTML = "Total cost = $" + cost;
+}
+
+function load() {
+document.getElementById("costLabel").innerHTML = "Total cost = $0";
+}
+</script>
+  </body>
+</html>
