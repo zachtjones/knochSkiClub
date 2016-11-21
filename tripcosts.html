@@ -7,6 +7,7 @@
 <center>
 <basefont size=4>
 <body text=#448844 bgcolor=#dedeeff onload="load()">
+<h1>**This is last year's trip cost calculator, this will be updated once the calendar is known**</h1>
 <h1>KDA-Trip cost calculator</h1>
 <hr width=80%>
 <p><font size=5><a href="index.html">Back to home</a></font><p>
@@ -15,7 +16,7 @@
 <p>Check the boxes of the items that you plan to use.<br>
 No data is collected based on this, it is only for your reference and to help plan the trips you wish to take.</p>
 <table border=2 cellpadding=8 cellspacing=10>
-<tr><td>Trip Location & Date</td><td>Money due date</td><td>Lift & Bus cost</td><td>Ski rental cost</td><td>Board rental cost</td><td>Helmet rental cost</td></tr>
+<tr><td>Trip Location &amp; Date</td><td>Money due date</td><td>Lift &amp; Bus cost</td><td>Ski rental cost</td><td>Board rental cost</td><td>Helmet rental cost</td></tr>
 <tr><td>Seven Springs <br>Dec. 23<sup>rd</sup></td>
 <td>Monday, Dec. 14<sup>th</sup></td>
 <td>$40.00<input type="checkbox" id="SSLB" onclick="calculateCost()"></td>
@@ -125,7 +126,7 @@ cost+=21;
 if (document.getElementById("SS2BR").checked == true) {
 cost+=25;
 }
-if (document.getElementById("SS2HR").checked == true) {
+	if (document.getElementById("SS2HR").checked == true) {
 cost+=10;
 }
 <!--Smuggler's notch-->
